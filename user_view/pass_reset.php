@@ -10,7 +10,7 @@ include("../user_controller/ret_pass.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body bgcolor="#ffe5eb">
+<body>
     <form action=""method="post">
         <fieldset>
             <fieldset> 

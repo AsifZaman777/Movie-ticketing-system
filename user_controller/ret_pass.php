@@ -33,11 +33,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       $new_pass = $_REQUEST['pass_new_pass'];
       $confirm_pass = $_REQUEST['pass_confirm'];
       $data = json_decode(file_get_contents('../user_data/reg_user_data.json'), true);
-      
+
       foreach ($data as $key => $value) {
         if($value['email'] == $user_email){
           if(($new_pass == $confirm_pass) && (strlen($new_pass)>=8)){
             $data[$key]['set_pass'] = $new_pass;
+            
             //fetching remaining data
             $remaining_data=file_get_contents("../user_data/reg_user_data.json");
             $fetch_data=json_decode($remaining_data);

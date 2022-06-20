@@ -1,5 +1,27 @@
 <?php
-include("../Seller_Control/process.php");
+include("../user_controller/homepage_valid.php");
+
+session_start();
+
+$cookie_name=$_SESSION["user_name"];
+$cookie_value="Dear Elite Customer";
+
+///if user is not logged in then redirect to login page
+//error handaling
+if($cookie_name=="")  
+{
+    header("location:../user_view/user_login.php");
+}
+
+setcookie($cookie_name, $cookie_value,time() + 86400, "/");
+
+if(isset($_COOKIE[$cookie_name])) {
+    echo "Welcome again ".$cookie_name;
+  }else {  
+    echo "<br/>Welcome to this page for the 1st time " . $cookie_name;  
+}  
+
+
 
 ?>
 <!DOCTYPE html>
@@ -18,14 +40,11 @@ include("../Seller_Control/process.php");
             <h4 align="center">Grab The Tickets For Entertainment</h4>
         </fieldset>
         <fieldset>
-    <p><h3>Movies Section</h3>
-     <!-- | <a href="#">Book ticket</a> -->
-    | <a href="https://github.com/RomonaSarkar16">Contact seller</a>
-    
-    | <a href="../Seller_View/Ticket.php">Ticket</a>
-    | <a href="../Seller_View/Update.php">Update and Process</a>
-    | <a href="../Seller_View/Aboutus.php">About us</a>
-    | <a href="../Seller_Control/Seller_Logout.php">Logout</a>
+    <p><a href="#">Top Movies</a>
+     | <a href="#">Book ticket</a>
+    | <a href="https://www.facebook.com/romonasarkar30">Contact with seller</a>
+    | <a href="../user_view/about us.php">About us</a>
+    | <a href="../user_controller/logout.php">Logout</a>
     
  </p>
  </fieldset>
@@ -78,9 +97,6 @@ include("../Seller_Control/process.php");
         <input type="radio" name="clock" value="Thursday at 8 PM">Thursday 8:00 PM
 
 
-        <!-- <?php
-        //echo $invalid_clock; 
-        ?> -->
    <br><br>
         <img src="../images/strange.jpg" srcset="" width="20%"><br>
        
@@ -110,13 +126,10 @@ echo  $invalid_hall;
 
  <h3>Please Inform us your comments or issues:</h3>
 
- <!-- <textarea name="comment">
-     <//?php echo  $comment;
-     ?>
-    </textarea> -->
+ <textarea name="address" rows="4" cols="40" placeholder="Please Give Your Feedback"></textarea>
  <h2>
      <br>
- Contact Us: <br>
+ Contact Us:
  Phone: *023455678 <br>
  email: 
  <a href="https://www.google.com/gmail/about/">Starcineplex@gmail.com</a>

@@ -1,16 +1,18 @@
 <?php
-include("../Seller_Control/process.php");
+
+include("../Admin_control/process.php");
+
+
+
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller Board</title>
-</head>
+
+<html >
+
+    <title>Admin HomePage</title>
+
 <body>
+    
 <form action="" method="POST">
     <fieldset>
         <fieldset>
@@ -18,14 +20,12 @@ include("../Seller_Control/process.php");
             <h4 align="center">Grab The Tickets For Entertainment</h4>
         </fieldset>
         <fieldset>
-    <p><h3>Movies Section</h3>
-     <!-- | <a href="#">Book ticket</a> -->
-    | <a href="https://github.com/RomonaSarkar16">Contact seller</a>
-    
-    | <a href="../Seller_View/Ticket.php">Ticket</a>
-    | <a href="../Seller_View/Update.php">Update and Process</a>
-    | <a href="../Seller_View/Aboutus.php">About us</a>
-    | <a href="../Seller_Control/Seller_Logout.php">Logout</a>
+    <p><a href="#">Top Movies</a>
+    | <a href="https://github.com/RomonaSarkar16">Contact with seller</a>
+    | <a href="https://github.com/rubabaa499">Contact with Manager</a>
+    | <a href="">Admin Panel</a>
+    | <a href="Cineplex_info.php">About us</a>
+    | <a href="../Admin_control/Admin_logout.php">Logout</a>
     
  </p>
  </fieldset>
@@ -33,13 +33,7 @@ include("../Seller_Control/process.php");
    
 
         <fieldset>
-            <h3>
-            Customer's Name : 
-            <input type="text" name="Customers_nam" placeholder="Customers_nam">
-         <?php
-             echo $invalid_customer_name;
-         ?>
-            </h3>
+            
         </fieldset>
     </fieldset>
     <br><br>
@@ -78,11 +72,9 @@ include("../Seller_Control/process.php");
         <input type="radio" name="clock" value="Thursday at 8 PM">Thursday 8:00 PM
 
 
-        <!-- <?php
-        //echo $invalid_clock; 
-        ?> -->
+        
    <br><br>
-        <img src="../images/strange.jpg" srcset="" width="20%"><br>
+        <img src="../images/strange.jpg"  width="20%"><br>
        
             
         <input type="radio" name="movie" value="Strange"> 
@@ -108,18 +100,22 @@ echo  $invalid_hall;
     
 </fieldset>
 
- <h3>Please Inform us your comments or issues:</h3>
-
- <!-- <textarea name="comment">
-     <//?php echo  $comment;
-     ?>
-    </textarea> -->
- <h2>
-     <br>
- Contact Us: <br>
- Phone: *023455678 <br>
+ <table>
+    <tr>
+        <td>
+        Contact Admin:<a href="https://github.com/Rayied991">Admin</a>
+</td>
+<td>
+        
+ Phone: 01615972128</td>
+ <td>
  email: 
  <a href="https://www.google.com/gmail/about/">Starcineplex@gmail.com</a>
+</td>
+</tr>
+ </table>
+
+
 
  </h2>
 <br><br>

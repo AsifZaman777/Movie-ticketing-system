@@ -51,7 +51,7 @@ $valid_password="";
             {
                 $_SESSION["user_name"]=$valid_username;
                 $_SESSION["password"]=$valid_password;
-                header("location:../Seller_View/Seller.php");
+                header("location:../user_view/homepage.php");
             }
             else
             {
@@ -68,6 +68,7 @@ $valid_password="";
   
 
     }
+
       
 
 ?>

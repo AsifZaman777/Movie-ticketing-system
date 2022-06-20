@@ -1,18 +1,22 @@
 <?php
-// session_start();
-session_start();
-if(isset($_SESSION['seller_name'])) {
-echo "Your session is running  " . $_SESSION['seller_name'];
-echo"<br>";
-}
-//$cookie_name="Sell";
-$value="Seller";
-setcookie("myCookie", $value);
 
-if(isset($_COOKIE["myCookie"])) {
-    echo "Welcome";
-  }else {  
-    echo "<br/>Welcome to this page for the 1st time ";  
+session_start ();
+if (isset($_SESSION['username']))
+{
+   echo "Your session is running <br>" .$_SESSION['username'];
+   echo "<br>";
+
+
+}
+$cookie_name="us";
+$cookie_value="Dear Elite Customer";
+setcookie($cookie_name, $cookie_value,time() + 86400, "/");
+
+if(isset($_COOKIE[$cookie_name])) {
+    echo "Welcome again <br>"; 
+  }
+  else {  
+    echo "<br/>Welcome to this page for the 1st time " . $cookie_name;  
 }  
 
 $invalid_customer_name="";
@@ -33,7 +37,7 @@ $customer_name = $_POST["Customers_nam"];
 // $clock = $_POST["clock"];
 // $movie =$_POST["movie"];
 
-// $comment = $_POST["comment"];
+$comment = $_POST["comment"];
 
 if(empty($customer_name)  || is_numeric($customer_name))
 {
@@ -41,20 +45,17 @@ if(empty($customer_name)  || is_numeric($customer_name))
 }
 else
 {
-    $_SESSION["Customers_nam"]=$_POST["Customers_nam"];
-    // $valid_customer_name= $customer_name;
+    $valid_customer_name= $customer_name;
     //$validfname = $Seller_fname;
-    // echo "Customers Name : " . $customer_name;
+    echo "Customers Name : " . $customer_name;
 }
 echo"<br>";
 
-// $_SESSION["TicketNo"]=$_POST["TicketNo"];
+echo"Ticket No : ";
+echo(rand(100,300));
+echo"<br>";
 
 
-
-
-
-$_SESSION["movie"] = $_POST["movie"];
 if(isset($_POST["movie"]))
 {
     echo"Movie Name : " . $_POST["movie"];
@@ -64,12 +65,12 @@ else
 {
     echo"Please select a Movie<br>";
 }
-$_SESSION["clock"] = $_POST["clock"];
+
 $_POST["clock"] = isset($_POST['clock']) ? "Movie Time : " . $_POST["clock"] : "Select Movie Time";
 echo $_POST["clock"];
 
 echo"<br>";
-$_SESSION["hall"] = $_POST["hall"];
+
 if(isset($_POST["hall"]))
 {
     // echo 'A radio button was selected.<br>';
@@ -78,7 +79,6 @@ if(isset($_POST["hall"]))
     if ($_POST['hall']=== 'Hall X') {
 
         echo 'Hall Name : X<br>';
-
   
       }
       else if ($_POST['hall']=== 'Hall Z') {
@@ -92,8 +92,9 @@ else
 $invalid_hall= "<br>select radio a Button.";
 }
 
-
-
+echo"Seat No : ";
+echo(rand(1,30));
+echo"<br>";
 
 
 

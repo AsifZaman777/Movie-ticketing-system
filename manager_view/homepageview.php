@@ -1,7 +1,8 @@
 <?php
-include("../Seller_Control/process.php");
+include("../manager_controller/ticketprocess.php");
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,14 +19,12 @@ include("../Seller_Control/process.php");
             <h4 align="center">Grab The Tickets For Entertainment</h4>
         </fieldset>
         <fieldset>
-    <p><h3>Movies Section</h3>
-     <!-- | <a href="#">Book ticket</a> -->
-    | <a href="https://github.com/RomonaSarkar16">Contact seller</a>
-    
-    | <a href="../Seller_View/Ticket.php">Ticket</a>
-    | <a href="../Seller_View/Update.php">Update and Process</a>
-    | <a href="../Seller_View/Aboutus.php">About us</a>
-    | <a href="../Seller_Control/Seller_Logout.php">Logout</a>
+    <p><a href="#">Top Movies</a>
+     | <a href="#">Book ticket</a>
+     |<a href="https://www.facebook.com/rubaba.rahman.319/">Contact with manager</a>
+    | <a href="../user_view/about us.php">About us</a>
+    |<a href="../manager_view/loginview.php">Manager Update & view </a>
+    | <a href="../manager_view/loginview.php">Logout</a>
     
  </p>
  </fieldset>
@@ -110,13 +109,13 @@ echo  $invalid_hall;
 
  <h3>Please Inform us your comments or issues:</h3>
 
- <!-- <textarea name="comment">
-     <//?php echo  $comment;
+ <textarea name="comment">
+     <?php echo  $comment;
      ?>
-    </textarea> -->
+    </textarea>
  <h2>
      <br>
- Contact Us: <br>
+ Contact Us:
  Phone: *023455678 <br>
  email: 
  <a href="https://www.google.com/gmail/about/">Starcineplex@gmail.com</a>
