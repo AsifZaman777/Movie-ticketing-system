@@ -1,0 +1,236 @@
+<!-- <?php
+include("../user_controller/homepage_valid.php");
+
+session_start();
+
+$cookie_name=$_SESSION["user_name"];
+$cookie_value="Dear Elite Customer";
+
+///if user is not logged in then redirect to login page
+//error handaling
+if($cookie_name=="")  
+{
+    header("location:../user_view/user_login.php");
+}
+
+setcookie($cookie_name, $cookie_value,time() + 86400, "/");
+
+if(isset($_COOKIE[$cookie_name])) {
+    echo "Welcome again ".$cookie_name;
+  }else {  
+    echo "<br/>Welcome to this page for the 1st time " . $cookie_name;  
+}  
+
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Board</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="star">
+        <h1 align="center" class="glow">Star Cineplex</h1>
+        <hr>
+    </div>
+
+<div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Booked History</a> </li>
+            <li><a href="#">Ticket price</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <button class="vanue" >Please select the perefered vanue</button>
+    </div>
+    <div id="slider">
+        <figure>
+            <img class="image" src="cine 2.jpg"  alt>
+            <img class="image" src="cine3.jpg" alt>
+            <img class="image" src="cine6.jpg" alt>
+            <img class="image" src="cine1.jpg" alt>
+            <img class="image" src="cine6.jpg" alt>
+        </figure>
+    </div>
+    <br>
+    <div class="notice">
+        <button class="butt" > <a href="https://www.instagram.com/cineplexmovies/?hl=en">Instagram</a> </button>
+        <button class="butt" ><a href="https://www.facebook.com/MYCINEPLEX/">Facebook</a></button>
+        <button class="butt" ><a href="https://www.youtube.com/watch?v=0Nr4ckuncgA">Youtube</a></button>
+    </div>
+
+        <br>
+        <div class="now">
+           <marquee behavior="" direction=""><h1 align="center">Now Showing  Now Showing
+            Now Showing Now Showing Now Showing Now Showing
+            
+        </h1></marquee>
+        </div>
+        <div class="panel">
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-text">
+                  <h4>Movie : Hawa</h4>
+                  <h4>Release : 22-7-2-2022</h4>
+                  <h4>Genre : Drama</h4>
+                  <button class="butt2">Book</button>
+                </div>
+                </div> 
+
+                <div class="card">
+                    <div class="card-image2"></div>
+                    <div class="card-text">
+                      <h4>Movie : Poran</h4>
+                      <h4>Release : 3-7-2-2022</h4>
+                      <h4>Genre : Drama</h4>
+                      <button class="butt2">Book</button>
+                    </div>
+                    </div> 
+          
+                    <div class="card">
+                        <div class="card-image3"></div>
+                        <div class="card-text">
+                          <h4 class="">Movie : Bullet Train</h4>
+                          <h4>Release : 1-6-2-2022</h4>
+                          <h4>Genre : Thriller</h4>
+                          <button class="butt2">Book</button>
+                        </div>
+                        </div> 
+          
+                        <div class="card">
+                            <div class="card-image4"></div>
+                            <div class="card-text">
+                              <h4>Movie : Love and thunder</h4>
+                              <h4>Release : 2-6-2-2022</h4>
+                              <h4>Genre : Action</h4>
+                              <button class="butt2">Book</button>
+                            </div>
+                            </div> 
+        </div>
+
+<br><br><br><br>
+<div class="now2">
+    <h1 align="center">Comming Soon</h1>
+ </div>
+
+        <div class="panel">
+            <div class="card">
+                <div class="card-image10"></div>
+                <div class="card-text">
+                  <h4>Movie : Black PantherII</h4>
+                  <h4>Release : November 2022</h4>
+                  <h4>Genre : Action</h4>
+                  <button class="butt2"><a href="https://en.wikipedia.org/wiki/Black_Panther:_Wakanda_Forever">Detailes</a></button>
+                </div>
+                </div> 
+
+                <div class="card">
+                    <div class="card-image11"></div>
+                    <div class="card-text">
+                      <h4>Movie : Orphan First Kill </h4>
+                      <h4>Premere : December 2022</h4>
+                      <h4>Genre : Thriller</h4>
+                      <button class="butt2"><a href="https://en.wikipedia.org/wiki/Orphan:_First_Kill">Detailes</a></button>
+                    </div>
+                    </div> 
+          
+                    <div class="card">
+                        <div class="card-image12"></div>
+                        <div class="card-text">
+                          <h4 class="">Movie : Avatar 2</h4>
+                          <h4>Premere : December 2022</h4>
+                          <h4>Genre : Advanture</h4>
+                          <button class="butt2"><a href="https://en.wikipedia.org/wiki/Avatar:_The_Way_of_Water">Detailes</a></button>
+                        </div>
+                        </div> 
+          
+                        <div class="card">
+                            <div class="card-image13"></div>
+                            <div class="card-text">
+                              <h4>Movie : Three thousads years of longing</h4>
+                              <h4>Premere : December 2022</h4>
+                              <h4>Genre : Action</h4>
+                              <button class="butt2"><a href="https://en.wikipedia.org/wiki/Three_Thousand_Years_of_Longing">Detailes</a></button>
+                            </div>
+                            </div> 
+        </div>
+
+
+        <br>
+        <div class="panel2">
+        <div class="vote" >
+            <h3 align="center">Customer Pole</h3>
+            <p align="center">How do you feel about Cineplex?</p> 
+            <br>
+            <input type="radio" value="exc" name="exc"><label for="good">Excellent</label> 
+            <input type="radio" value="good" name="good"><label for="good">Good</label> 
+            <input type="radio" value="bad" name="bad"><label for="good">Bad</label>
+            <br>
+            <br><br>
+            <div class="vote2">
+                <h3 align="center">Notice</h3>
+             <marquee behavior="" direction="">
+                <p>Thursday is weekly
+                holyday. Please bring the ticket before the arrival. Please 
+                check the schedule before the arrival </p>
+             </marquee>
+                </div>
+
+                <br><br>
+                <div class="vote2">
+                    <h3 align="center">Student Offer</h3>
+                    <a href="https://www.promocodebd.com/offer/star-cineplex-movie-ticket-free/" align="center">Click here to checkout student offers</a>
+                    </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+        <div class="footer">
+            <div class="footer-text">
+                <u><b><p>Asif tech limited</p></b></u> 
+                <p>level 1 mirpur 13</p>
+                <p>Dhaka 1216</p>
+                <p>Bangladesh</p>
+            </div>
+
+            <div class="footer-text">
+                <u><b><p>Contact US</p></b></u>
+                <p>(+88) 09617660660</p>
+                <p>01755665544</p>
+                <u><b><p>Contact US</p></b></u>
+                <p>eramasif16@gmail.com</p>
+            </div>
+
+            <div class="footer-text">
+                <u><b><p>More at cineplex</p></b></u>
+                <p>Student reward program</p>
+                <p>New year offer</p>
+            </div>
+
+            <div class="footer-text">
+                <u><b><p>Copyright</p></b></u>
+                <p>Copyright @ Asif 2050</p>
+                <p>Privacy and policy</p>
+            </div>
+
+
+            
+        </div>
+
+    
+</body>
+
+</script>
+</html>
