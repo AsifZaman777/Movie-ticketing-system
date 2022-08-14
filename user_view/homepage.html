@@ -45,7 +45,7 @@ if(isset($_COOKIE[$cookie_name])) {
     <div class="navbar">
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Booked History</a> </li>
+            <li><a href="#">Booked History</a></li>
             <li><a href="#">Ticket price</a></li>
             <li><a href="#">About us</a></li>
             <li><a href="#">Contact</a></li>
@@ -81,40 +81,40 @@ if(isset($_COOKIE[$cookie_name])) {
         <div class="card">
             <div class="card-image"></div>
             <div class="card-text">
-                <h4>Movie : Hawa</h4>
+                <h4 id="hawa">Movie : Hawa</h4>
                 <h4>Release : 22-7-2-2022</h4>
                 <h4>Genre : Drama</h4>
-                <button class="butt2">Book</button>
+                <button class="butt2" id="b1" onclick="openBook();hawa();">Book</button>
             </div>
         </div>
 
         <div class="card">
             <div class="card-image2"></div>
             <div class="card-text">
-                <h4>Movie : Poran</h4>
+                <h4 id="poran">Movie : Poran</h4>
                 <h4>Release : 3-7-2-2022</h4>
                 <h4>Genre : Drama</h4>
-                <button class="butt2">Book</button>
+                <button class="butt2" id="b2" onclick="openBook();poran();">Book</button>
             </div>
         </div>
 
         <div class="card">
             <div class="card-image3"></div>
             <div class="card-text">
-                <h4 class="">Movie : Bullet Train</h4>
+                <h4 id="bullet train">Movie : Bullet Train</h4>
                 <h4>Release : 1-6-2-2022</h4>
                 <h4>Genre : Thriller</h4>
-                <button class="butt2">Book</button>
+                <button class="butt2" id="b3" onclick="openBook();bullet();">Book</button>
             </div>
         </div>
 
         <div class="card">
             <div class="card-image4"></div>
             <div class="card-text">
-                <h4>Movie : Love and thunder</h4>
+                <h4 id="Love and Thunder">Movie : Love and thunder</h4>
                 <h4>Release : 2-6-2-2022</h4>
                 <h4>Genre : Action</h4>
-                <button class="butt2">Book</button>
+                <button class="butt2" id="b4" onclick="openBook();love();">Book</button>
             </div>
         </div>
     </div>
@@ -277,8 +277,29 @@ if(isset($_COOKIE[$cookie_name])) {
             <p>Bangabanshu military meuseam, Bijoy Shorony, Dhaka 1215</p>
         </h2></a>
    
-    <button class="prefer" onclick="closePopup()" >Found Prefered Location</button>
+    <button onclick="closePopup()" >Found Prefered Location</button>
     </div>
+
+    <div class="bookPopup" id="bookPopup">
+        <input type="text" id="mname" placeholder="Movie Name"><br>
+        <input type="date" id="mdate"><br>
+        <input type="time" id="mtime"><br>
+
+        <p align="center">Select the vanue</p>
+
+        <select name="choose_vanue" id="mvanue">
+            <option value="Bashundhara">Bashundhara</option>
+            <option value="Simanto Shambhar">Simanto Shambhar</option>
+            <option value="SKS Tower">SKS Tower</option>
+            <option value="Sony Square">Sony Square</option>
+            <option value="Bangabandhu Military Museum">Bangabandhu Military Museum</option>
+        </select>
+<br><br>
+        <button class="prefer" onclick="closeBook()">Book Ticket</button>
+        <button class="prefer" id="cancel" onclick="closeBook()">Cancel</button>
+
+    </div>
+
 </body>
 <script src="homepage.js">
 </script>
