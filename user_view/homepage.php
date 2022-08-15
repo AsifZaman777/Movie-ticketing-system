@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seller Board</title>
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="../user_css/homepage.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
@@ -20,7 +20,7 @@
 
     <div class="navbar">
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#">Login</a></li>
             <li><a href="#">Booked History</a></li>
             <li><a href="#">Ticket price</a></li>
             <li><a href="#">About us</a></li>
@@ -277,7 +277,7 @@
     </div>
 
 </body>
-<script src="homepage.js">
+<script src="../user_js/homepage.js">
 </script>
 
 </html>

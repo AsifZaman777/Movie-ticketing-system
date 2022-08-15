@@ -13,43 +13,50 @@ if(!(isset($_SESSION)))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User panel</title>
+    <link rel="stylesheet" href="../user_css/login.css">
 </head>
 <body>
     <form action="" method="post">
-        <fieldset>
-            <fieldset> 
-                <h1 align="center">Movie ticketing System</h1>
-            </fieldset>
-        </fieldset>
-        <br><br>
-        <fieldset>
-            <legend><b><h2>User login panel</h2></b></legend>
-            <br>
-            <label for="user_name">User Name : </label>
-            <input type="text" name="user_name" placeholder="Name" >
-            
-            <?php echo $invalid_username; ?>
-            <br><br>
-            <label for="pass">Password : </label>
-            <input type="password" name="password" placeholder="Password">
-            <?php echo $invalid_password; ?>
-            <br><br>
-            <input type="submit" name="submit" value="Login">
-            <br><br>
-            <big><a href="pass_reset.php">Forgot password?</a></big>
-            <br>
-           <p>New here? <big><a href="user_reg.php">Register</a></p></big>
 
-        </fieldset>
-    </form>
-    <br><br>
-    <fieldset>
-      <legend><h2>Officials login</h2></legend>
-      <marquee behavior="" direction="left"><h2><mark>This field is only for the officials </mark></h2></marquee>
-      <h3>Login as -</h3>
-      <button><a href="../Admin_View/Admin_Login.php">Admin</a></button><br><br>
-      <button><a href="../manager_view/loginview.php">Manager</a></button><br><br>
-      <button><a href="../Seller_View/Seller_Login.php">Seller</a></button>
-    </fieldset>
+        <div class="star">
+            <h1 align="center" class="glow">User Login</h1>
+              
+        </div>
+    
+       <div class="custlog">
+        <br>
+        <h2 align="center" class="userPanel">Customer Section</h2>
+        <input type="text" name="user_name" placeholder="Name" >
+        <?php echo $invalid_username; ?>
+        <br><br>
+        <input type="password" name="password" placeholder="Password">
+        <?php echo $invalid_password; ?>
+        <button class="butt3"><a href="pass_reset.php" >Forgot password?</a></button>
+
+        <div>
+            <br><br>
+            <br>
+            <button name="submit" class="butt">Login</button><br>
+            <button class="butt2"><a href="user_reg.php">New Here</a></button>
+        </div>
+        
+       </div>
+            
+            
+
+      
+    <div class="vote2">
+        <h2>Officials login</h2>
+        <marquee behavior="" direction="left"><h2><mark>This field is only for the officials </mark></h2></marquee>
+       <button class="butt4"><a  href="../Admin_View/Admin_Login.php">Admin</a></button><br><br>
+     <button class="butt4"><a  href="../manager_view/loginview.php">Manager</a></button>  <br><br>
+      <button class="butt4" ><a href="../Seller_View/Seller_Login.php">Seller</a></button> 
+
+
+      
+    </div>
+
+    <br><br><br>
+      
 </body>
 </html>
