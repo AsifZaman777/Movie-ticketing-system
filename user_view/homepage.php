@@ -1,27 +1,3 @@
-<!-- <?php
-include("../user_controller/homepage_valid.php");
-
-session_start();
-
-$cookie_name=$_SESSION["user_name"];
-$cookie_value="Dear Elite Customer";
-
-///if user is not logged in then redirect to login page
-//error handaling
-if($cookie_name=="")  
-{
-    header("location:../user_view/user_login.php");
-}
-
-setcookie($cookie_name, $cookie_value,time() + 86400, "/");
-
-if(isset($_COOKIE[$cookie_name])) {
-    echo "Welcome again ".$cookie_name;
-  }else {  
-    echo "<br/>Welcome to this page for the 1st time " . $cookie_name;  
-}  
-
-?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -277,7 +253,7 @@ if(isset($_COOKIE[$cookie_name])) {
             <p>Bangabanshu military meuseam, Bijoy Shorony, Dhaka 1215</p>
         </h2></a>
    
-    <button onclick="closePopup()" >Found Prefered Location</button>
+    <button class="prefer" onclick="closePopup()" >Found Prefered Location</button>
     </div>
 
     <div class="bookPopup" id="bookPopup">
