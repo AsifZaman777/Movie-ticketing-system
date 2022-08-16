@@ -20,7 +20,7 @@
 
     <div class="navbar">
         <ul>
-            <li><a href="#">Login</a></li>
+            <li><a href="user_login.php">Login</a></li>
             <li><a href="#">Booked History</a></li>
             <li><a href="#">Ticket price</a></li>
             <li><a href="#">About us</a></li>
@@ -150,7 +150,7 @@
     <div class="panel2">
         <div class="special">
             <h1 align="center">Special Offers</h1>
-            <img src="new offer.png" alt="">
+            <img src="new offer.png">
         </div>
         <div class="vote">
             <h3 align="center">Customer Pole</h3>

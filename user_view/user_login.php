@@ -26,7 +26,7 @@ if(!(isset($_SESSION)))
        <div class="custlog">
         <br>
         <h2 align="center" class="userPanel">Customer Section</h2>
-        <input type="text" name="user_name" placeholder="Name" >
+        <input type="email" name="email" placeholder="Email" >
         <?php echo $invalid_username; ?>
         <br><br>
         <input type="password" name="password" placeholder="Password">

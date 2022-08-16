@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../user_css/reg.css">
 </head>
 <body>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data" onsubmit="return authform()">
 
         <div class="star">
             <h1 align="center" class="glow">User Registration</h1>
@@ -22,55 +22,56 @@
         <div class="panel">
             <legend align="center"><h2>Personal Information</h2></legend>
             <label for="f_name">First name : </label>
-            <input type="text" name="f_name" placeholder="First name"><?php echo $invalid_fname; ?><br><br>
+            <input type="text" name="f_name" id="f_name" placeholder="First name" onkeyup="checkfname()">
+            <p id="fnameerr"></p>
             <label for="l_name">Last name : </label>
-            <input type="text" name="l_name" placeholder="Last name"><?php echo $invalid_lname; ?> <br><br>
+            <input type="text" name="l_name" id="l_name" placeholder="Last name" onkeyup="checklname()" >
+            <p id="lnameerr"></p>
             <label for="info">Gender : </label><br><br>
-    
-            <input type="radio" name="gender"><label for="male">Male</label>
-            <input type="radio" name="gender"><label for="Female">Female</label>
-            <input type="radio" name="gender"><label for="others">Others</label>
-            <?php echo  $invalid_gender; ?>
+            <input type="radio" name="gender" value="male" id="male" onclick="radiocheck()"><label for="male">Male</label>
+            <input type="radio" name="gender" value="female" id="female" onclick="radiocheck()"><label for="Female">Female</label>
+            <input type="radio" name="gender" value="others" id="others" onclick="radiocheck()"><label for="others">Others</label>
+            <p id="radioerr"></p>
             <br><br>
         
-            <label for="dob">Date of birth : </label>
-            <input type="date" name="dob">
-            <?php echo $invalid_dob ?>
-            <br><br>
     
     <hr>
     
             <legend align="center"><h2>Contact information</h2></legend>
             <label for="mobile">Mobile number : </label>
-            <input type="text" name="mobile" placeholder="Contact number">
-            <?php echo $invalid_mobile; ?>
+            <input type="text" name="mobile" id="mobile" placeholder="Contact number" onkeyup="mobcheck()">
+            <p id="moberr"></p>
             <br><br>
             <label for="email">Email : </label>
-            <input type="email" name="email" placeholder="Email">
-            <?php echo $invalid_email; ?>
+            <input type="email" name="email" id="email" placeholder="Email" onkeyup="emailcheck()">
+            <p id="emailerr"></p>
             <br><br>
             <label for="address">Address : </label>
-            <textarea name="address" rows="4" cols="40" placeholder="house no./road no./block no./section no./district/Bangladesh."></textarea>
-            <?php echo $invalid_address; ?>
+             <input type="text" name="address" id="address" rows="7" cols="40" placeholder="house no./road no." onkeyup="addcheck()"> 
+            <p id="adderr"></p>           
             <br><br>
         
     <br><br>
      <hr>
             <br><br>
             <label for="set_pass">Password : </label>
-            <input type="password" name="set_pass" placeholder="Password">
-            <?php echo $invalid_set_pass; ?>
+            <input type="password" id="pass" name="set_pass" placeholder="Password" onkeyup="passcheck()">
+           <p id="passerr"></p>
             <br><br>
             <label for="confirm_pass">Confirm password : </label>
-            <input type="password" name="confirm_pass" placeholder="Confirm password">
-            <?php echo $invalid_con_pass; ?>
+            <input type="password" id="con" name="confirm_pass" placeholder="Confirm password" onkeyup="concheck()">
+           <p id="conerr"></p>
             <br><br>
-           <button name="submit" value="register" class="butt1">
+           <button name="submit" id="submit" value="register" class="butt1" onclick="submit()">
            <a href="">Register</a></button>
+           <button name="login" class="butt1"><a href="user_login.php">Back to login</a> </button>
             <br><br>
-       
         </div>
         
 </form>
+
 </body>
+
+<script src="../user_js/regval.js">
+</script>
 </html>
