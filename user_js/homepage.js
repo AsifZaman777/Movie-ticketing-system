@@ -1,6 +1,7 @@
 
 let popup=document.getElementById("popup");
 let bookPopup=document.getElementById("bookPopup");
+let histPopup=document.getElementById("histPopup");
 let email=document.getElementById("email");
 
 function openPopup(){
@@ -37,6 +38,15 @@ function bullet()
 function love()
 {
     document.getElementById("mname").value="Love and Thunder";
+}
+
+function openHist()
+{
+    histPopup.classList.add("openHist");
+}
+function closeHist()
+{
+    histPopup.classList.remove("openHist");
 }
 
 

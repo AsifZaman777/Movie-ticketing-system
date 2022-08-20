@@ -1,10 +1,11 @@
-
 <?php
+include '../user_model/db.php';
 session_start();
 
 if (!isset($_SESSION['username'])) {
 
     echo "<p>Please Login First</p>";
+    $username="Unknown User";
 }
 else {
     $username = $_SESSION['username'];
@@ -22,7 +23,7 @@ else {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seller Board</title>
     <link rel="stylesheet" href="../user_css/homepage.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
 </head>
 
 <body>
@@ -35,13 +36,16 @@ else {
     <div class="navbar">
         <ul>
             <li><a href="user_login.php">Login</a></li>
-            <li><a href="#">Booked History</a></li>
             <li><a href="#">About us</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="../user_controller/logout.php">Logout</a></li>
         </ul>
+        <button class="hist" onclick="openHist()"><img src="book.png" width="40px" height="40px" alt=""></button>
         <button class="vanue" onclick="openPopup()">Please check the perefered vanue</button>
     </div>
+
+   
+
     <div id="slider">
         <figure>
             <img class="image" src="cine 2.jpg" alt>
@@ -56,6 +60,19 @@ else {
         <button class="butt"> <a href="https://www.instagram.com/cineplexmovies/?hl=en">Instagram</a> </button>
         <button class="butt"><a href="https://www.facebook.com/MYCINEPLEX/">Facebook</a></button>
         <button class="butt"><a href="https://www.youtube.com/watch?v=0Nr4ckuncgA">Youtube</a></button>
+    </div>
+    <div class="histPopup" id="histPopup">
+        <h1 align="center">Booked History</h1>
+        <hr>
+        <table align="center" border="1px" cellspacing="0px" cellpadding="5px">
+            <tr>
+                <th>Movie Name</th>
+                <th>Show Date</th>  
+            </tr>
+             
+        </table>
+        
+        <button class="histbutt" onclick="closeHist()">Checked Booking</button>
     </div>
 
     <br>
@@ -292,6 +309,6 @@ else {
 
 </body>
 <script src="../user_js/homepage.js">
-</script>
 
+</script>
 </html>

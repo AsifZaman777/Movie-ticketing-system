@@ -77,7 +77,7 @@ body>p
   color: whitesmoke;
   text-transform: uppercase;
   transition: 0.5s;
-  font-size: 14px;
+  font-size: 15px;
   font-family: monospace;
   font-weight: bolder;
 
@@ -170,7 +170,7 @@ body {
 
 div#slider {
   overflow: hidden;
-  height: 500px;
+  height: 600px;
 }
 
 div#slider figure img {
@@ -232,7 +232,6 @@ div#slider figure {
   backdrop-filter: blur(5px);
 
 }
-
 
 .card {
   display: grid;
@@ -584,7 +583,7 @@ div#slider figure {
 .bookPopup
 {
   width: 700px;
-  height: 530px;
+  height: 550px;
   background: white;
   border-radius: 6px;
   position: absolute;
@@ -631,14 +630,17 @@ div#slider figure {
   display: block;
   width: 50%;
   margin: 0 auto;
+  border: 3px rgb(224, 56, 201) solid;
+  border-radius: 20px;
   font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   color: #60666d;
 }
+
 #cancel
 {
   width: 100px;
-  height: 30px;
+  height: 35px;
   margin-right: 20px;
   text-align: center;
   border-radius: 5px;
@@ -653,6 +655,78 @@ div#slider figure {
   outline: none;
   transition: 0.25s;
   margin-top: 10px;
-  margin-left: 278px;
+  margin-left: 290px;
   font-size: 17px;
 }
+
+.histPopup
+{
+  width: 700px;
+  height: 300px;
+  background: white;
+  border-radius: 6px;
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  visibility: hidden;
+  transition: transform 0.25s ;
+}
+.openHist
+{
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+.hist
+{
+  width: 60px;
+  height:60px;
+  margin-right: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+  border: 2px solid blue;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  transition: 0.25s;
+  margin-left: 20px;
+}
+.hist:hover
+{
+  background: rgba(115, 203, 74, 0.992);
+  transform: scale(1.1);
+}
+
+.histbutt
+{
+  width: 200px;
+  height: 35px;
+  margin-right: 20px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  background: rgb(230, 21, 59);
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  transition: 0.25s;
+  margin-top: 140px;
+  margin-left: 250px;
+  font-size: 17px;
+}
+.histbutt:hover
+{
+  background: rgba(211, 36, 36, 0.997);
+  transform: scale(1.1);
+}
+
