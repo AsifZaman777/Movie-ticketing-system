@@ -408,7 +408,7 @@ div#slider figure {
 }
 
 .vote>input {
-  color: white;
+  color: rgb(38, 12, 12);
   margin-left: 30px;
 }
 
@@ -729,4 +729,59 @@ div#slider figure {
   background: rgba(211, 36, 36, 0.997);
   transform: scale(1.1);
 }
+
+#flip,#panel
+{
+  display: none;
+}
+#flip,#panel li a
+{
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+ 
+  #flip,#panel
+  {
+    padding: 5px;
+    text-align: center;
+    background-color: #1937a3;
+    border: solid 1px #c3c3c3;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  
+  }
+  #flip,#panel a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    
+  }
+
+  #flip,#panel li a
+{
+  display: block;
+}
+  #flip,#panel li a:hover
+  {
+    background-color: #261457;
+  }
+
+  #flip,#panel li 
+  {
+    list-style: none;
+  }
+  
+  .navbar
+  {
+    display: none;
+  }
+
+}
+
 

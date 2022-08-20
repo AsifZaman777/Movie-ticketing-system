@@ -24,6 +24,18 @@ else {
     <title>Seller Board</title>
     <link rel="stylesheet" href="../user_css/homepage.css">
    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script> 
+        $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideDown("slow"); 
+            
+            $("#flip").click(function(){
+                $("#panel").slideUp("slow");
+            });
+          });
+        });
+        </script>
 </head>
 
 <body>
@@ -32,6 +44,18 @@ else {
         <h1 align="center" class="glow">Star Cineplex</h1>
         <hr>
     </div>
+
+    <div id="flip">
+        <p>Click me down↓</p>
+    </div>
+
+    <div id="panel">
+        <li><a href="user_login.php">Login</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="../user_controller/logout.php">Logout</a></li>
+        </div>
+        
 
     <div class="navbar">
         <ul>
@@ -187,9 +211,7 @@ else {
             <h3 align="center">Customer Pole</h3>
             <p align="center">How do you feel about Cineplex?</p>
             <br>
-            <input type="radio" value="exc" name="exc"><label for="good">Excellent</label>
-            <input type="radio" value="good" name="good"><label for="good">Good</label>
-            <input type="radio" value="bad" name="bad"><label for="good">Bad</label>
+           <input type="text" name="pole">
             <br>
             <br><br><br>
             <div class="vote2">
