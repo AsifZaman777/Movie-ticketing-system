@@ -8,6 +8,12 @@ body {
   overflow-x: hidden;
 }
 
+body>p
+{
+  color:white;
+  position: fixed;
+}
+
 .star {
   color: #2844b1;
   background-color: #010618e2;
@@ -578,7 +584,7 @@ div#slider figure {
 .bookPopup
 {
   width: 700px;
-  height: 520px;
+  height: 530px;
   background: white;
   border-radius: 6px;
   position: absolute;

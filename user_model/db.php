@@ -40,7 +40,12 @@ class db{
                 $sqlstr="SELECT email,password FROM $tablename WHERE email='$email' AND password='$set_pass' ";
                 return $conn->query($sqlstr);
             }
-
+           
+            function updatepass($conn,$tablename,$email,$set_pass)
+            {
+                $sqlstr="UPDATE $tablename SET password='$set_pass' WHERE email='$email'";
+                return $conn->query($sqlstr);
+            }
 
         }
 

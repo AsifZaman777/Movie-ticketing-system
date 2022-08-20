@@ -1,5 +1,7 @@
+
 let popup=document.getElementById("popup");
 let bookPopup=document.getElementById("bookPopup");
+let email=document.getElementById("email");
 
 function openPopup(){
     popup.classList.add("openPopup");
@@ -36,5 +38,6 @@ function love()
 {
     document.getElementById("mname").value="Love and Thunder";
 }
+
 
 

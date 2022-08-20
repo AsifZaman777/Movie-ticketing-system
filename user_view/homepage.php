@@ -1,4 +1,18 @@
 
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+
+    echo "<p>Please Login First</p>";
+}
+else {
+    $username = $_SESSION['username'];
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,9 +36,9 @@
         <ul>
             <li><a href="user_login.php">Login</a></li>
             <li><a href="#">Booked History</a></li>
-            <li><a href="#">Ticket price</a></li>
             <li><a href="#">About us</a></li>
             <li><a href="#">Contact</a></li>
+            <li><a href="../user_controller/logout.php">Logout</a></li>
         </ul>
         <button class="vanue" onclick="openPopup()">Please check the perefered vanue</button>
     </div>
@@ -257,9 +271,9 @@
     </div>
 
     <div class="bookPopup" id="bookPopup">
-        <input type="text" id="mname" placeholder="Movie Name"><br>
-        <input type="date" id="mdate"><br>
-        <input type="time" id="mtime"><br>
+        <input type="text" id="mname" name="mname" placeholder="Movie Name"><br>
+        <input type="date" id="mdate" name="date"><br>
+        <input type="text" id="email" name="email" value="<?php echo $username ?>" placeholder="Confirm Email To Book"><br>
 
         <p align="center">Select the vanue</p>
 
