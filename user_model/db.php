@@ -52,8 +52,6 @@ class db{
                 $sqlstr="INSERT into $tablename(movie,date,email,vanue) VALUES ('$movie_name','$movie_date','$movie_email','$vanue')";
                 return $conn->query($sqlstr);
             }
-
-
         }
 
 ?> 

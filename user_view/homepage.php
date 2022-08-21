@@ -93,8 +93,37 @@ else {
             <tr>
                 <th>Movie Name</th>
                 <th>Show Date</th>  
+                <th>Vanue</th>
             </tr>
-             
+            
+            <?php
+       $servername="localhost";
+       $name="root";
+       $password="";
+       $dbname="web_project";
+       $tablename="booking";
+       //create connection
+$conn=new mysqli($servername,$name,$password,$dbname);
+
+//connection check
+if($conn->connect_error){
+   echo "error connecting database";
+}
+
+$sql="SELECT movie,date,vanue FROM $tablename Where email='$username'";
+$result=$conn->query($sql);
+if($result->num_rows>0){
+    while($row=$result->fetch_assoc()){
+      echo "<tr><td>".$row["movie"]."</td><td>".$row["date"]."</td><td>".$row["vanue"]."</td></tr>";
+    }
+    echo "</table>";
+}
+else{
+    echo "No record founds";
+}
+
+    ?>
+
         </table>
         
         <button class="histbutt" onclick="closeHist()">Checked Booking</button>
