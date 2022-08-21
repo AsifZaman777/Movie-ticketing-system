@@ -1,5 +1,6 @@
 <?php
-include '../user_model/db.php';
+include '../user_controller/homepage_valid.php';
+// include '../user_model/db.php';
 session_start();
 
 if (!isset($_SESSION['username'])) {
@@ -207,13 +208,7 @@ else {
             <h1 align="center">Special Offers</h1>
             <img src="new offer.png">
         </div>
-        <div class="vote">
-            <h3 align="center">Customer Pole</h3>
-            <p align="center">How do you feel about Cineplex?</p>
-            <br>
-           <input type="text" name="pole">
-            <br>
-            <br><br><br>
+        <div class="vote"> 
             <div class="vote2">
                 <h3 align="center">Notice</h3>
                 <marquee behavior="" direction="">
@@ -309,14 +304,15 @@ else {
     <button class="prefer" onclick="closePopup()" >Found Prefered Location</button>
     </div>
 
+    <form action="" method="post">
     <div class="bookPopup" id="bookPopup">
         <input type="text" id="mname" name="mname" placeholder="Movie Name"><br>
-        <input type="date" id="mdate" name="date"><br>
+        <input type="date" id="mdate" name="mdate"><br>
         <input type="text" id="email" name="email" value="<?php echo $username ?>" placeholder="Confirm Email To Book"><br>
 
         <p align="center">Select the vanue</p>
 
-        <select name="choose_vanue" id="mvanue">
+        <select id="mvanue" name="mvanue">
             <option value="Bashundhara">Bashundhara</option>
             <option value="Simanto Shambhar">Simanto Shambhar</option>
             <option value="SKS Tower">SKS Tower</option>
@@ -324,10 +320,12 @@ else {
             <option value="Bangabandhu Military Museum">Bangabandhu Military Museum</option>
         </select>
 <br><br>
-        <button class="prefer" onclick="closeBook()">Book Ticket</button>
+        <button class="prefer" onclick="closeBook()" name="book">Book Ticket</button>
         <button class="prefer" id="cancel" onclick="closeBook()">Cancel</button>
 
     </div>
+    </form>
+    
 
 </body>
 <script src="../user_js/homepage.js">
