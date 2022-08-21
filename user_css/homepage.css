@@ -34,7 +34,7 @@ body>p
 
 @keyframes gtx {
   from {
-    text-shadow: 0 0 10px #fff,
+    text-shadow: 0 0 10px rgb(65, 241, 1),
       0 0 20px rgb(217, 23, 23),
       0 0 30px #e60073,
       0 0 40px #e60073,
@@ -44,7 +44,7 @@ body>p
   }
 
   to {
-    text-shadow: 0 0 20px rgb(248, 0, 227),
+    text-shadow: 0 0 20px rgb(62, 186, 224),
       0 0 30px #e60073,
       0 0 40px #e60073,
       0 0 50px #e60073,
