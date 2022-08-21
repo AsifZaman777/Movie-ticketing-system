@@ -102,7 +102,7 @@ else {
        $password="";
        $dbname="web_project";
        $tablename="booking";
-       //create connection
+       
 $conn=new mysqli($servername,$name,$password,$dbname);
 
 //connection check
@@ -124,9 +124,44 @@ else{
 
     ?>
 
+<?php
+         $servername="localhost";
+         $name="root";
+         $password="";
+         $dbname="web_project";
+         $tablename="booking";
+         //create connection
+  $conn=new mysqli($servername,$name,$password,$dbname);
+  
+    if($conn->connect_error){
+         echo "<p>error connecting database</p>";
+    }
+  
+  if(isset($_POST['del']))
+  {
+   $sql="DELETE FROM booking WHERE email='$username'";
+
+   $check_email=$conn->query("SELECT email FROM $tablename WHERE email='$username'");
+
+   if($conn->query($sql)===TRUE && $check_email->num_rows>0 )
+   {
+    echo "<p>Bokking Cancelled successfully</p>";
+    
+   }
+   else
+   {
+    echo "<p>No Booking to delete</p> " . $conn->error;
+   }
+  }
+?>
+
         </table>
         
         <button class="histbutt" onclick="closeHist()">Checked Booking</button>
+        <form action="" method="post">
+        <button class="histbutt2" onclick="closeHist()" name="del" >Cancel Booking</button>
+        </form>
+        
     </div>
 
     <br>
