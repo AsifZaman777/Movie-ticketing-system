@@ -11,7 +11,17 @@ body {
 body>p
 {
   color:white;
-  position: fixed;
+  position: absolute;
+  left: 90%;
+}
+body>h3{
+  color:white;
+  position: absolute;
+}
+body>h4{
+  color:white;
+  position: absolute;
+  left: 70%;
 }
 
 .star {
@@ -88,7 +98,7 @@ body>p
   margin-top: 1px;
   height: 4px;
   width: 0;
-  background: rgb(135, 49, 221);
+  background: rgb(28, 141, 227);
   position: absolute;
   left: 0;
   bottom: -10px;

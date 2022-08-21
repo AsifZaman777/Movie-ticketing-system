@@ -3,15 +3,28 @@ include '../user_controller/homepage_valid.php';
 // include '../user_model/db.php';
 session_start();
 
+
+
 if (!isset($_SESSION['username'])) {
 
-    echo "<p>Please Login First</p>";
     $username="Unknown User";
-}
-else {
-    $username = $_SESSION['username'];
+    echo "<p>Welcome for the first time</p>";
 }
 
+else if(isset($_SESSION['username'])){
+    $username=$_SESSION['username'];
+    $cookie_name = "username";
+    $cookie_value = $username;
+    setcookie($cookie_name, $cookie_value,time() + 86400, "/");
+    
+
+    if(isset($_COOKIE[$cookie_name])) {
+        echo "<p>$username</p>";
+      }else {  
+        echo "<p>Welcome to this page for the 1st time</p>"; 
+    } 
+
+}
 
 ?>
 

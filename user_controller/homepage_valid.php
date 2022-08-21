@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     if($check_email->num_rows>0)
     {
-        echo "<p>You have already a booking</p>";
+        echo "<h4>You have already a booking</h4>";
     }
     else
     {
@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $obj=new db();
             $conn=$obj->opencon();
             $obj->bookmovie($conn,'booking',$movie_name,$movie_date,$movie_email,$vanue);
-            echo "<p>Booking Successful</p>";    
+            echo "<h3>Booking Successful</h3>";    
         }
        
 }
