@@ -65,8 +65,8 @@ else if(isset($_SESSION['username'])){
 
     <div id="panel">
         <li><a href="user_login.php">Login</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="about.php">About us</a></li>
+        <li><a href="https://www.facebook.com/asif.eram.1">Contact</a></li>
         <li><a href="../user_controller/logout.php">Logout</a></li>
         </div>
         
@@ -74,7 +74,7 @@ else if(isset($_SESSION['username'])){
     <div class="navbar">
         <ul>
             <li><a href="user_login.php">Login</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="about_us.php">About us</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="../user_controller/logout.php">Logout</a></li>
         </ul>
@@ -134,8 +134,7 @@ if($result->num_rows>0){
 else{
     echo "No record founds";
 }
-
-    ?>
+ ?>
 
 <?php
          $servername="localhost";
