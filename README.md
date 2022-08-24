@@ -1,2 +1,3 @@
 # Mid-project
-Project using HTML and PHP
+PHP and javascript project with mysql in backend 
+
