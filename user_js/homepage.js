@@ -48,6 +48,6 @@ function closeHist()
 {
     histPopup.classList.remove("openHist");
 }
-
+//changed here//
 
 
